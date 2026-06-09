@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ragul Murugesan | Java Full Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,98 +13,72 @@
     <nav class="main-nav">
         <div class="container nav-container">
             <div class="nav-brand">RAGUL<span>.M</span></div>
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <a href="https://drive.google.com/uc?export=download&id=1BJdvLopeggb8deHMYuibgNB8fOda4amY" class="nav-resume-btn">Resume</a>
-            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="https://drive.google.com/uc?export=download&id=1BJdvLopeggb8deHMYuibgNB8fOda4amY" class="nav-resume-btn">Resume</a>
         </div>
     </nav>
 
     <header id="home" class="hero">
         <div class="container hero-z">
-            <div class="hero-content">
-                <span class="greeting">Hi there, I'm</span>
-                <h1>Ragul Murugesan</h1>
-                <p class="typing-container">I am a <span id="typing-text"></span></p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn primary">View My Work</a>
-                </div>
-            </div>
+            <h1>Ragul Murugesan</h1>
+            <p class="typing-container">I am a <span id="typing-text"></span></p>
+            <a href="#projects" class="btn primary">View My Work</a>
         </div>
     </header>
 
-    <section class="about reveal" id="about">
+    <section id="about" class="reveal">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-grid">
-                <div class="about-card glass bold-card">
-                    <p>I am a dedicated <strong>Java Full Stack Developer</strong> from CMS College of Engineering. I specialize in building scalable backend systems with Spring Boot.</p>
-                </div>
-                <div class="code-window glass bold-card">
-                    <div class="window-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-                    <pre><code>public class Ragul {
-    String role = "Full Stack";
-    void code() { createImpact(); }
-}</code></pre>
-                </div>
+                <div class="glass">I am a dedicated Java Full Stack Developer from CMS College of Engineering. I specialize in building scalable backend systems with Spring Boot.</div>
+                <div class="glass"><code>public class Ragul { <br> String role = "Full Stack"; <br> void code() { createImpact(); } <br> }</code></div>
             </div>
         </div>
     </section>
 
-    <section class="experience reveal" id="experience">
+    <section id="experience" class="reveal">
         <div class="container">
             <h2 class="section-title">Experience</h2>
-            <div class="experience-card glass bold-card">
-                <h3>Full Stack Developer Intern</h3>
-                <p class="company">Fantasy Solution, Trichy</p>
-                <ul>
-                    <li>Developed backend APIs using Spring Boot.</li>
-                    <li>Managed MySQL databases.</li>
-                </ul>
-            </div>
+            <div class="glass"><h3>Full Stack Developer Intern</h3><p>Fantasy Solution, Trichy</p></div>
         </div>
     </section>
 
-    <section class="projects reveal" id="projects">
+    <section id="projects" class="reveal">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
-                <div class="project-card glass bold-card"><h3>SmartShop</h3><a href="https://github.com/Ragulrajesh11/E-Web" class="view-project">Source Code</a></div>
-                <div class="project-card glass bold-card"><h3>Student Management</h3><a href="https://github.com/Ragulrajesh11/SMS" class="view-project">Source Code</a></div>
-                <div class="project-card glass bold-card"><h3>Portfolio Gen</h3><a href="https://github.com/Ragulrajesh11/dynamic-portfolio-generator" class="view-project">Source Code</a></div>
+                <div class="glass"><h3>SmartShop</h3><a href="https://github.com/Ragulrajesh11/E-Web">Source Code</a></div>
             </div>
         </div>
     </section>
 
-    <section class="contact reveal" id="contact">
+    <section id="contact" class="reveal">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="info-item glass"><i class="fas fa-envelope"></i><p>ragulmurugesan3103@gmail.com</p></div>
-                    <a href="https://github.com/Ragulrajesh11" class="info-item glass"><i class="fab fa-github"></i><p>GitHub</p></a>
-                    <a href="https://leetcode.com/u/4Y191W1ywe/" class="info-item glass"><i class="fas fa-code"></i><p>LeetCode</p></a>
+                <div class="glass">
+                    <p><i class="fas fa-envelope"></i> ragulmurugesan3103@gmail.com</p>
+                    <a href="https://github.com/Ragulrajesh11"><i class="fab fa-github"></i> GitHub</a><br>
+                    <a href="https://leetcode.com/u/4Y191W1ywe/"><i class="fas fa-code"></i> LeetCode</a>
                 </div>
-                <div class="contact-form glass bold-card">
+                <div class="glass">
                     <form action="https://formspree.io/f/xeewkgqz" method="POST">
                         <input type="text" name="name" placeholder="Name" required>
                         <input type="email" name="email" placeholder="Email" required>
-                        <textarea name="message" rows="4" placeholder="Message" required></textarea>
-                        <button type="submit" class="submit-btn">Send Message</button>
+                        <textarea name="message" placeholder="Message" required></textarea>
+                        <button type="submit" class="submit-btn">Send</button>
                     </form>
-                    <div id="status-message" style="display:none; text-align:center; padding:10px; color:#27c93f; background:rgba(39,201,63,0.1); border-radius:8px; margin-top:10px;">Message sent successfully!</div>
+                    <div id="status-message" style="display:none; color:green; margin-top:10px;">Message Sent!</div>
                 </div>
             </div>
         </div>
     </section>
-
-    <footer class="footer"><p>&copy; 2026 <span>Ragul Murugesan</span>.</p></footer>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
@@ -114,7 +88,7 @@
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
             const res = await fetch(form.action, { method: "POST", body: new FormData(form), headers: {'Accept': 'application/json'} });
-            if (res.ok) { status.style.display = "block"; form.reset(); setTimeout(() => status.style.display = "none", 5000); }
+            if (res.ok) { status.style.display = "block"; form.reset(); setTimeout(() => status.style.display = "none", 3000); }
         });
     </script>
 </body>
