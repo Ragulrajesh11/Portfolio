@@ -27,8 +27,9 @@
     </nav>
 
     <header id="home" class="hero">
+        <div class="code-bg"></div>
         <div class="container hero-z">
-            <div class="hero-content">
+            <div class="hero-content initial-fade-in">
                 <span class="greeting">Hi there, I'm</span>
                 <h1>Ragul Murugesan</h1>
                 <p class="typing-container">I am a <span id="typing-text"></span></p>
@@ -50,7 +51,7 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-grid">
                 <div class="about-card glass bold-card">
-                    <p>I am a dedicated <strong>Java Full Stack Developer</strong>. I specialize in building scalable backend systems with Spring Boot and modern, interactive frontends.</p>
+                    <p>I am a dedicated <strong>Java Full Stack Developer</strong> from CMS College of Engineering. I specialize in building scalable backend systems with Spring Boot and modern, interactive frontends.</p>
                 </div>
                 <div class="code-window glass bold-card">
                     <div class="window-header">
@@ -90,24 +91,36 @@
         </div>
     </section>
 
+    <section class="skills reveal">
+        <div class="container">
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="skills-grid">
+                <div class="skill-card glass bold-card"><i class="fab fa-java java-icon"></i><h3>Java/SpringBoot</h3></div>
+                <div class="skill-card glass bold-card"><i class="fas fa-database db-icon"></i><h3>MySQL</h3></div>
+                <div class="skill-card glass bold-card"><i class="fab fa-js js-icon"></i><h3>JavaScript</h3></div>
+                <div class="skill-card glass bold-card"><i class="fab fa-html5 html-icon"></i><h3>HTML/CSS</h3></div>
+            </div>
+        </div>
+    </section>
+
     <section class="projects reveal" id="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card glass bold-card">
                     <i class="fas fa-shopping-bag proj-icon"></i>
-                    <h3>SmartShop E-Commerce</h3>
-                    <a href="https://github.com/Ragulrajesh11/E-Web" target="_blank" class="view-project">Source Code</a>
+                    <h3>SmartShop: A Full Stack E-Commerce Web Application</h3>
+                    <a href="https://github.com/Ragulrajesh11/E-Web" target="_blank" class="view-project">Source Code <i class="fab fa-github"></i></a>
                 </div>
                 <div class="project-card glass bold-card">
                     <i class="fas fa-graduation-cap proj-icon"></i>
-                    <h3>Student Management System</h3>
-                    <a href="https://github.com/Ragulrajesh11/SMS" target="_blank" class="view-project">Source Code</a>
+                    <h3>Student Management System – Full Stack Web Application</h3>
+                    <a href="https://github.com/Ragulrajesh11/SMS" target="_blank" class="view-project">Source Code <i class="fab fa-github"></i></a>
                 </div>
                 <div class="project-card glass bold-card">
                     <i class="fas fa-magic proj-icon"></i>
-                    <h3>Portfolio Generator</h3>
-                    <a href="https://github.com/Ragulrajesh11/dynamic-portfolio-generator" target="_blank" class="view-project">Source Code</a>
+                    <h3>Portfoliify: Dynamic Full-Stack Portfolio Generator</h3>
+                    <a href="https://github.com/Ragulrajesh11/dynamic-portfolio-generator/tree/main/portfolio" target="_blank" class="view-project">Source Code <i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
@@ -122,9 +135,21 @@
                         <i class="fas fa-envelope"></i>
                         <p>ragulmurugesan3103@gmail.com</p>
                     </div>
+                    <div class="info-item glass bold-card">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 6381746560</p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/ragulmurugesan" target="_blank" class="info-item glass bold-card linkedin-item-box">
+                        <i class="fab fa-linkedin"></i>
+                        <p>LinkedIn Profile</p>
+                    </a>
                     <a href="https://github.com/Ragulrajesh11" target="_blank" class="info-item glass bold-card">
                         <i class="fab fa-github"></i>
                         <p>GitHub Profile</p>
+                    </a>
+                    <a href="https://leetcode.com/u/4Y191W1ywe/" target="_blank" class="info-item glass bold-card">
+                        <i class="fas fa-code"></i>
+                        <p>LeetCode Profile</p>
                     </a>
                 </div>
                 <div class="contact-form glass bold-card">
@@ -147,12 +172,17 @@
     <script>
         new Typed('#typing-text', {
             strings: ['Java Full Stack Developer', 'Backend Specialist', 'Spring Boot Enthusiast'],
-            typeSpeed: 50, backSpeed: 30, loop: true
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
         });
+
         function reveal() {
             const reveals = document.querySelectorAll(".reveal");
             for (let i = 0; i < reveals.length; i++) {
-                if (reveals[i].getBoundingClientRect().top < window.innerHeight - 150) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 150) {
                     reveals[i].classList.add("active");
                 }
             }
