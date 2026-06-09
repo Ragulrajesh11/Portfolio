@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Form popup and alignment fix */
+        .contact-form { display: flex; flex-direction: column; justify-content: center; }
+        .contact-form input, .contact-form textarea { width: 100%; margin-bottom: 20px; padding: 15px; border-radius: 12px; background: rgba(255, 255, 255, 0.06); border: 2px solid var(--border); color: white; }
+        .submit-btn { width: 100%; padding: 16px; border-radius: 12px; border: none; background: var(--primary); color: white; font-weight: 800; cursor: pointer; transition: var(--transit); }
+        #status-message { display: none; text-align: center; margin-top: 20px; padding: 10px; background: rgba(39, 201, 63, 0.1); color: #27c93f; border-radius: 8px; font-weight: bold; }
+    </style>
 </head>
 <body>
 
@@ -27,9 +34,8 @@
     </nav>
 
     <header id="home" class="hero">
-        <div class="code-bg"></div>
         <div class="container hero-z">
-            <div class="hero-content initial-fade-in">
+            <div class="hero-content">
                 <span class="greeting">Hi there, I'm</span>
                 <h1>Ragul Murugesan</h1>
                 <p class="typing-container">I am a <span id="typing-text"></span></p>
@@ -91,36 +97,24 @@
         </div>
     </section>
 
-    <section class="skills reveal">
-        <div class="container">
-            <h2 class="section-title">Tech Stack</h2>
-            <div class="skills-grid">
-                <div class="skill-card glass bold-card"><i class="fab fa-java java-icon"></i><h3>Java/SpringBoot</h3></div>
-                <div class="skill-card glass bold-card"><i class="fas fa-database db-icon"></i><h3>MySQL</h3></div>
-                <div class="skill-card glass bold-card"><i class="fab fa-js js-icon"></i><h3>JavaScript</h3></div>
-                <div class="skill-card glass bold-card"><i class="fab fa-html5 html-icon"></i><h3>HTML/CSS</h3></div>
-            </div>
-        </div>
-    </section>
-
     <section class="projects reveal" id="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card glass bold-card">
                     <i class="fas fa-shopping-bag proj-icon"></i>
-                    <h3>SmartShop: A Full Stack E-Commerce Web Application</h3>
-                    <a href="https://github.com/Ragulrajesh11/E-Web" target="_blank" class="view-project">Source Code <i class="fab fa-github"></i></a>
+                    <h3>SmartShop E-Commerce</h3>
+                    <a href="https://github.com/Ragulrajesh11/E-Web" target="_blank" class="view-project">Source Code</a>
                 </div>
                 <div class="project-card glass bold-card">
                     <i class="fas fa-graduation-cap proj-icon"></i>
-                    <h3>Student Management System – Full Stack Web Application</h3>
-                    <a href="https://github.com/Ragulrajesh11/SMS" target="_blank" class="view-project">Source Code <i class="fab fa-github"></i></a>
+                    <h3>Student Management System</h3>
+                    <a href="https://github.com/Ragulrajesh11/SMS" target="_blank" class="view-project">Source Code</a>
                 </div>
                 <div class="project-card glass bold-card">
                     <i class="fas fa-magic proj-icon"></i>
-                    <h3>Portfoliify: Dynamic Full-Stack Portfolio Generator</h3>
-                    <a href="https://github.com/Ragulrajesh11/dynamic-portfolio-generator/tree/main/portfolio" target="_blank" class="view-project">Source Code <i class="fab fa-github"></i></a>
+                    <h3>Portfolio Generator</h3>
+                    <a href="https://github.com/Ragulrajesh11/dynamic-portfolio-generator" target="_blank" class="view-project">Source Code</a>
                 </div>
             </div>
         </div>
@@ -131,26 +125,11 @@
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="info-item glass bold-card">
-                        <i class="fas fa-envelope"></i>
-                        <p>ragulmurugesan3103@gmail.com</p>
-                    </div>
-                    <div class="info-item glass bold-card">
-                        <i class="fas fa-phone"></i>
-                        <p>+91 6381746560</p>
-                    </div>
-                    <a href="https://www.linkedin.com/in/ragulmurugesan" target="_blank" class="info-item glass bold-card linkedin-item-box">
-                        <i class="fab fa-linkedin"></i>
-                        <p>LinkedIn Profile</p>
-                    </a>
-                    <a href="https://github.com/Ragulrajesh11" target="_blank" class="info-item glass bold-card">
-                        <i class="fab fa-github"></i>
-                        <p>GitHub Profile</p>
-                    </a>
-                    <a href="https://leetcode.com/u/4Y191W1ywe/" target="_blank" class="info-item glass bold-card">
-                        <i class="fas fa-code"></i>
-                        <p>LeetCode Profile</p>
-                    </a>
+                    <div class="info-item glass bold-card"><i class="fas fa-envelope"></i><p>ragulmurugesan3103@gmail.com</p></div>
+                    <div class="info-item glass bold-card"><i class="fas fa-phone"></i><p>+91 6381746560</p></div>
+                    <a href="https://www.linkedin.com/in/ragulmurugesan" target="_blank" class="info-item glass bold-card linkedin-item-box"><i class="fab fa-linkedin"></i><p>LinkedIn</p></a>
+                    <a href="https://github.com/Ragulrajesh11" target="_blank" class="info-item glass bold-card"><i class="fab fa-github"></i><p>GitHub</p></a>
+                    <a href="https://leetcode.com/u/4Y191W1ywe/" target="_blank" class="info-item glass bold-card"><i class="fas fa-code"></i><p>LeetCode</p></a>
                 </div>
                 <div class="contact-form glass bold-card">
                     <form action="https://formspree.io/f/xeewkgqz" method="POST">
@@ -159,6 +138,7 @@
                         <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
                         <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
                     </form>
+                    <div id="status-message">Message sent successfully!</div>
                 </div>
             </div>
         </div>
@@ -172,19 +152,29 @@
     <script>
         new Typed('#typing-text', {
             strings: ['Java Full Stack Developer', 'Backend Specialist', 'Spring Boot Enthusiast'],
-            typeSpeed: 50,
-            backSpeed: 30,
-            loop: true
+            typeSpeed: 50, backSpeed: 30, loop: true
         });
 
+        // Form Submission Script
+        const form = document.querySelector("form");
+        const status = document.getElementById("status-message");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const response = await fetch(form.action, {
+                method: "POST", body: new FormData(form), headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                status.style.display = "block";
+                form.reset();
+                setTimeout(() => status.style.display = "none", 5000);
+            }
+        });
+
+        // Scroll Reveal
         function reveal() {
             const reveals = document.querySelectorAll(".reveal");
             for (let i = 0; i < reveals.length; i++) {
-                const windowHeight = window.innerHeight;
-                const elementTop = reveals[i].getBoundingClientRect().top;
-                if (elementTop < windowHeight - 150) {
-                    reveals[i].classList.add("active");
-                }
+                if (reveals[i].getBoundingClientRect().top < window.innerHeight - 150) reveals[i].classList.add("active");
             }
         }
         window.addEventListener("scroll", reveal);
